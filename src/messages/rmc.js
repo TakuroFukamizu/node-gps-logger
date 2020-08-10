@@ -18,6 +18,17 @@ export default class Rmc {
         this.checksum = x[1]; // チェックサム
     }
     toString() {
-        return `[RMC] from:${this.kind}, status:${this.status}, mode:${this.mode}, date:${this.date}, time:${this.time}, lat:${this.lat_value}, lon:${this.lon_value}`;
+        return `[RMC] from:${this.kind}, status:${this.status}, mode:${this.mode}, `
+        + `date:${this.date}, time:${this.time}, `
+        + `lat:${this.lat_value} ${this.lat_dir}, lon:${this.lon_value} ${this.lon_dir}`;
+    }
+    toLogLine() {
+        const lat = (Math.floor(this.lat_value/100) + ((this.lat_value%100) / 60)) * (this.lat_dir == 'N' ? 1 : -1);
+        const lon = (Math.floor(this.lon_value/100) + ((this.lon_value%100) / 60)) * (this.lon_dir == 'E' ? 1 : -1);
+        return `date:${this.date}, time:${this.time}`
+        + `, status:${this.status}, mode:${this.mode}, from:${this.kind}` 
+        + `, lat:${this.lat_value} ${this.lat_dir} (${lat})`
+        + `, lon:${this.lon_value} ${this.lon_dir} (${lon})`
+        + '\n';
     }
 };

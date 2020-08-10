@@ -4,6 +4,7 @@ import Readline from '@serialport/parser-readline';
 // const SerialPort = require('serialport');
 // const Readline = require('@serialport/parser-readline');
 import Rmc from './messages/rmc.js';
+import LogFile from './reporter/log.js';
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ const port = new SerialPort(process.env.SERIAL_PORT, {
 const parser = new Readline({delimiter: NL});
 port.pipe(parser);
 
+const rmcLogger = new LogFile(process.env.LOG_DIR, 'rmc');
+
 // NMEA-0183 format
 const pattern = /^\$[A-Z]{2,5},[,.\-\*A-Za-z0-9]{2,}$/;
 parser.on('data', line => {
@@ -28,7 +31,8 @@ parser.on('data', line => {
         case '$GPRMC':
         case '$GNRMC':
             const msg = new Rmc(entities);
-            console.log(`> ${msg}`)
+            console.log(`> ${msg}`);
+            rmcLogger.write(msg.toLogLine());
             break;
     }
 });
