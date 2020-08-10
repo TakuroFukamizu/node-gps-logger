@@ -29,14 +29,10 @@ $ yarn start
 ### Console
 
 ```sh
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152612.00, lat:3530.58446 N, lon:13925.31735 E
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152613.00, lat:3530.58186 N, lon:13925.31684 E
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152614.00, lat:3530.58170 N, lon:13925.31733 E
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152615.00, lat:3530.58204 N, lon:13925.31813 E
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152616.00, lat:3530.58240 N, lon:13925.31755 E
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152617.00, lat:3530.58178 N, lon:13925.31755 E
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152618.00, lat:3530.58037 N, lon:13925.31675 E
-> [RMC] from:GNSS, status:A, mode:A, date:100820, time:152619.00, lat:3530.57912 N, lon:13925.31652 E
+> [RMC] from:GNSS, status:A, mode:A, date:100820, time:214248.00, lat:3530.61030 N, lon:13925.31795 E
+> [GGA] from:GNSS, time:214248.00, lat:3530.61030 N, lon:13925.31795 E, quality:1, sattelites:06, hdop:1.65
+> [RMC] from:GNSS, status:A, mode:A, date:100820, time:214249.00, lat:3530.61003 N, lon:13925.31751 E
+> [GGA] from:GNSS, time:214249.00, lat:3530.61003 N, lon:13925.31751 E, quality:1, sattelites:06, hdop:1.65
 ```
 
 ### Log file
@@ -49,3 +45,4 @@ date:100820, time:152004.00, status:A, mode:A, from:GNSS, lat:3530.60715 N (35.5
 date:100820, time:152005.00, status:A, mode:A, from:GNSS, lat:3530.60602 N (35.510100333333334), lon:13925.31451 E (139.4219085)
 date:100820, time:152006.00, status:A, mode:A, from:GNSS, lat:3530.60447 N (35.5100745), lon:13925.31459 E (139.42190983333333)
 ```
+
