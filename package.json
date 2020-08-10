@@ -1,0 +1,16 @@
+{
+  "name": "node-gps-logger",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node --experimental-modules src/main.js"
+  },
+  "author": "TakuroFukamizu<takuro.f.1987@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "csv-stringify": "^5.5.1",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^8.2.0",
+    "serialport": "^9.0.1"
+  }
+}
